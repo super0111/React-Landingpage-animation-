@@ -1,0 +1,469 @@
+body {
+  margin: 0px !important
+}
+
+@font-face {
+  font-family: 'lazer84';
+  src: local('lazer84'), url(../public/fonts/lazer-84/Lazer84.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy'), url(../public/fonts/Gilroy-FREE/Gilroy-Light.otf) format('opentype');
+}
+@font-face {
+  font-family:'Pixeboy';
+  src: local('Pixeboy'), url(../public/fonts/pixeboy/Pixeboy.ttf) format('truetype');
+}
+
+
+.react-multi-carousel-track  {
+  padding-top: 30px !important;
+}
+
+
+/* Here using -webkit, we make angle 
+of 45 degree of falling star */
+.sky {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotateZ(115deg);
+  transform: rotateZ(115deg);
+  z-index: 100;
+}
+  
+/* Here we are making roundabout balls  */
+.star {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 2px;
+  border-radius: 1885px;
+  background: linear-gradient(-45deg, 
+    #eef0f5, rgba(0, 0, 255, 0));
+  -webkit-filter: drop-shadow(0 0 6px #eef1f8);
+  filter: drop-shadow(0 0 6px #d7dff0);
+  -webkit-animation: tail 3000ms ease-in-out infinite,
+    shooting 3000ms ease-in-out infinite;
+  animation: tail 3000ms ease-in-out infinite,
+    shooting 3000ms ease-in-out infinite;
+}
+  
+/* Here we add before and after effect to star */
+.star::before,
+.star::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    -45deg,
+    rgba(0, 0, 255, 0),
+    #a9aaac,
+    rgba(0, 0, 255, 0)
+  );
+  -webkit-transform: translateX(50%) rotateZ(45deg);
+  transform: translateX(50%) rotateZ(45deg);
+  border-radius: 100%;
+  -webkit-animation: shining 3000ms ease-in-out infinite;
+  animation: shining 3000ms ease-in-out infinite;
+}
+.star::after {
+  -webkit-transform: translateX(50%) rotateZ(-45deg);
+  transform: translateX(50%) rotateZ(-45deg);
+}
+  
+/* Here we are adding location of each 
+   nth-child, animations, delays, and 
+   before and after effects to each 
+   and every balls(stars) */
+.star:nth-child(1) {
+  top: calc(50% - -570px);
+  left: calc(50% - -100px);
+  -webkit-animation-delay: 4000ms;
+  animation-delay: 4000ms;
+}
+.star:nth-child(1)::before,
+.star:nth-child(1)::after {
+  -webkit-animation-delay: 4000ms;
+  animation-delay: 4000ms;
+}
+.star:nth-child(2) {
+  top: calc(50% - -440px);
+  left: calc(50% - 35px);
+  -webkit-animation-delay: 5000ms;
+  animation-delay: 5000ms;
+}
+.star:nth-child(2)::before,
+.star:nth-child(2)::after {
+  -webkit-animation-delay: 5000ms;
+  animation-delay: 5000ms;
+}
+.star:nth-child(3) {
+  top: calc(50% - -130px);
+  left: calc(50% - 140px);
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(3)::before,
+.star:nth-child(3)::after {
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(4) {
+  top: calc(50% - 10px);
+  left: calc(50% - 113px);
+  -webkit-animation-delay: 8000ms;
+  animation-delay: 8000ms;
+}
+.star:nth-child(4)::before,
+.star:nth-child(4)::after {
+  -webkit-animation-delay: 8000ms;
+  animation-delay: 8000ms;
+}
+.star:nth-child(5) {
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+  -webkit-animation-delay: 3000ms;
+  animation-delay: 3000ms;
+}
+.star:nth-child(5)::before,
+.star:nth-child(5)::after {
+  -webkit-animation-delay: 3000ms;
+  animation-delay: 3000ms;
+}
+.star:nth-child(6) {
+  top: calc(50% - 480px);
+  left: calc(50% - 425px);
+  -webkit-animation-delay: 5000ms;
+  animation-delay: 5000ms;
+}
+.star:nth-child(6)::before,
+.star:nth-child(6)::after {
+  -webkit-animation-delay: 5000ms;
+  animation-delay: 5000ms;
+}
+.star:nth-child(7) {
+  top: calc(50% - 670px);
+  left: calc(50% - 340px);
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(7)::before,
+.star:nth-child(7)::after {
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(8) {
+  top: calc(50% - 670px);
+  left: calc(50% - 180px);
+  -webkit-animation-delay: 9000ms;
+  animation-delay: 9000ms;
+}
+.star:nth-child(8)::before,
+.star:nth-child(8)::after {
+  -webkit-animation-delay: 9000ms;
+  animation-delay: 9000ms;
+}
+.star:nth-child(9) {
+  top: calc(50% - 770px);
+  left: calc(50% - 190px);
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(9)::before,
+.star:nth-child(9)::after {
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(10) {
+  top: calc(50% - -430px);
+  left: calc(50% - -190px);
+  -webkit-animation-delay: 4000ms;
+  animation-delay: 4000ms;
+}
+.star:nth-child(10)::before,
+.star:nth-child(10)::after {
+  -webkit-animation-delay: 4000ms;
+  animation-delay: 4000ms;
+}
+.star:nth-child(11) {
+  top: calc(50% - -490px);
+  left: calc(50% - -330px);
+  -webkit-animation-delay: 6000ms;
+  animation-delay: 6000ms;
+}
+.star:nth-child(11)::before,
+.star:nth-child(11)::after {
+  -webkit-animation-delay: 6000ms;
+  animation-delay: 6000ms;
+}
+.star:nth-child(12) {
+  top: calc(50% - -300px);
+  left: calc(50% - -410px);
+  -webkit-animation-delay: 6000ms;
+  animation-delay: 6000ms;
+}
+.star:nth-child(12)::before,
+.star:nth-child(12)::after {
+  -webkit-animation-delay: 4000ms;
+  animation-delay: 4000ms;
+}
+.star:nth-child(13) {
+  top: calc(50% - -300px);
+  left: calc(50% - -700px);
+  -webkit-animation-delay: 6000ms;
+  animation-delay: 6000ms;
+}
+.star:nth-child(13)::before,
+.star:nth-child(13)::after {
+  -webkit-animation-delay: 6000ms;
+  animation-delay: 6000ms;
+}
+.star:nth-child(14) {
+  top: calc(50% - -300px);
+  left: calc(50% - -1200px);
+  -webkit-animation-delay: 4000ms;
+  animation-delay: 4000ms;
+}
+.star:nth-child(14)::before,
+.star:nth-child(14)::after {
+  -webkit-animation-delay: 4000ms;
+  animation-delay: 4000ms;
+}
+.star:nth-child(15) {
+  top: calc(50% - 0px);
+  left: calc(50% - -390px);
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(15)::before,
+.star:nth-child(15)::after {
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(16) {
+  top: calc(50% - -170px);
+  left: calc(50% - -900px);
+  -webkit-animation-delay: 8000ms;
+  animation-delay: 8000ms;
+}
+.star:nth-child(16)::before,
+.star:nth-child(16)::after {
+  -webkit-animation-delay: 8000ms;
+  animation-delay: 8000ms;
+}
+.star:nth-child(17) {
+  top: calc(50% - -25px);
+  left: calc(50% - -1300px);
+  -webkit-animation-delay: 4000ms;
+  animation-delay: 4000ms;
+}
+.star:nth-child(17)::before,
+.star:nth-child(17)::after {
+  -webkit-animation-delay: 4000ms;
+  animation-delay: 4000ms;
+}
+.star:nth-child(18) {
+  top: calc(50% - 150px);
+  left: calc(50% - -1600px);
+  -webkit-animation-delay: 8000ms;
+  animation-delay: 8000ms;
+}
+.star:nth-child(18)::before,
+.star:nth-child(18)::after {
+  -webkit-animation-delay: 8000ms;
+  animation-delay: 8000ms;
+}
+.star:nth-child(19) {
+  top: calc(50% - 400px);
+  left: calc(50% - -1380px);
+  -webkit-animation-delay: 8000ms;
+  animation-delay: 8000ms;
+}
+.star:nth-child(19)::before,
+.star:nth-child(19)::after {
+  -webkit-animation-delay: 8000ms;
+  animation-delay: 8000ms;
+}
+.star:nth-child(20) {
+  top: calc(50% - 280px);
+  left: calc(50% - -1900px);
+  -webkit-animation-delay: 6000ms;
+  animation-delay: 6000ms;
+}
+.star:nth-child(20)::before,
+.star:nth-child(20)::after {
+  -webkit-animation-delay: 6000ms;
+  animation-delay: 6000ms;
+}
+.star:nth-child(21) {
+  top: calc(50% - 670px);
+  left: calc(50% - -260px);
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(21)::before,
+.star:nth-child(21)::after {
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(22) {
+  top: calc(50% - 830px);
+  left: calc(50% - -60px);
+  -webkit-animation-delay: 8000ms;
+  animation-delay: 8000ms;
+}
+.star:nth-child(22)::before,
+.star:nth-child(22)::after {
+  -webkit-animation-delay: 8000ms;
+  animation-delay: 8000ms;
+}
+.star:nth-child(23) {
+  top: calc(50% - 980px);
+  left: calc(50% - -400px);
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(23)::before,
+.star:nth-child(23)::after {
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(24) {
+  top: calc(50% - 980px);
+  left: calc(50% - -800px);
+  -webkit-animation-delay: 5000ms;
+  animation-delay: 5000ms;
+}
+.star:nth-child(24)::before,
+.star:nth-child(24)::after {
+  -webkit-animation-delay: 5000ms;
+  animation-delay: 5000ms;
+}
+.star:nth-child(25) {
+  top: calc(50% - 1330px);
+  left: calc(50% - -1200px);
+  -webkit-animation-delay: 4000ms;
+  animation-delay: 4000ms;
+}
+.star:nth-child(25)::before,
+.star:nth-child(25)::after {
+  -webkit-animation-delay: 6000ms;
+  animation-delay: 4000ms;
+}
+.star:nth-child(26) {
+  top: calc(50% - 1230px);
+  left: calc(50% - -1350px);
+  -webkit-animation-delay: 3000ms;
+  animation-delay: 9000ms;
+}
+.star:nth-child(26)::before,
+.star:nth-child(26)::after {
+  -webkit-animation-delay: 3000ms;
+  animation-delay: 3000ms;
+}
+.star:nth-child(27) {
+  top: calc(50% - 1400px);
+  left: calc(50% - -1450px);
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 9000ms;
+}
+.star:nth-child(27)::before,
+.star:nth-child(27)::after {
+  -webkit-animation-delay: 7000ms;
+  animation-delay: 7000ms;
+}
+.star:nth-child(28) {
+  top: calc(50% - 1130px);
+  left: calc(50% - -1600px);
+  -webkit-animation-delay: 5000ms;
+  animation-delay: 9000ms;
+}
+.star:nth-child(28)::before,
+.star:nth-child(28)::after {
+  -webkit-animation-delay: 5000ms;
+  animation-delay: 5000ms;
+}
+  
+/* This code will help to generate 
+effect in tail of star */
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 100px;
+  }
+  100% {
+    width: 0;
+  }
+}
+  
+/* This code will generate shining 
+effect in head of star */
+@keyframes shining {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 30px;
+  }
+  100% {
+    width: 0;
+  }
+}
+  
+/* Here we are adding webkit-animation 
+to head of star for shining */
+@-webkit-keyframes shining {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 30px;
+  }
+  100% {
+    width: 0;
+  }
+}
+  
+/* Here we are adding webkit-animation 
+to tail of star */
+@-webkit-keyframes tail {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 100px;
+  }
+  100% {
+    width: 0;
+  }
+}
+  
+/* Here we are adding webkit-animation 
+for shooting effect */
+@-webkit-keyframes shooting {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(270px);
+    transform: translateX(270px);
+  }
+}
+  
+/* Here we make shooting effect */
+@keyframes shooting {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(270px);
+    transform: translateX(270px);
+  }
+}
